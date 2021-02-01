@@ -45,11 +45,11 @@ export class UniTxComponent implements AfterViewInit {
         data?.forEach((tx) => {
           UniswapDto.round(tx);
           this.saveLastValue(tx);
-          if (tx.amount < this.whalesMoreThan) {
-            this.addInArray(this.dtos, tx);
-          } else {
-            this.addInArray(this.dtosWhales, tx);
-          }
+          // if (tx.amount < this.whalesMoreThan) {
+          this.addInArray(this.dtos, tx);
+          // } else {
+          //   this.addInArray(this.dtosWhales, tx);
+          // }
         });
       },
       (err) => {
